@@ -1,0 +1,33 @@
+<head><title>Test</title> 
+    <meta charset=utf-8> </head>
+    <body>
+        <h1>Webscraping of Wikipedia pages</h1>
+        <form method="POST">
+			
+			<label>Enter Link</label>
+			<input name="u"><br><br>
+            <input type="submit" value="Click me" />	
+			
+        </form>
+		<style>
+			table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			}
+		</style>
+		<table>
+				<tbody>
+					<tr>
+					<th>Word</th>
+					<th>Frequency_count</th>
+					</tr>
+					{% for word,freq_count in my_list %}			
+						<tr>
+							<td>{{ word }}</td>
+							<td>{{ freq_count }}</td>	
+						</tr>
+					{% endfor %}
+				</tbody>
+		</table>
+		
+    </body>
